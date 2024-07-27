@@ -1,6 +1,6 @@
 requests
 pandas
-numpy
+numpy==1.26.1
 matplotlib
 tensorflow==2.14.0
 scikit-learn
