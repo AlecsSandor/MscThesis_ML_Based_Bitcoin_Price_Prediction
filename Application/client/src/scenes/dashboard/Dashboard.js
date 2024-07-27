@@ -119,7 +119,7 @@ const Dashboard = () => {
   // ----------------------------
   // Use effect block for running the webSocket used to receive signal notifications
   useEffect(() => {
-    const ws = new WebSocket('ws://localhost:8000/ws')
+    const ws = new WebSocket(process.env.REACT_APP_WEBSOCKET_BASE_URL)
 
     ws.onopen = () => {
       console.log('WebSocket connection opened')
