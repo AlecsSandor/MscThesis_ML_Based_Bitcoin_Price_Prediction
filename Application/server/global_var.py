@@ -1,0 +1,1 @@
+last_BTC_buy_price = 0.0
