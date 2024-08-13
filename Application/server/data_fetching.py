@@ -20,11 +20,24 @@ class DataFetching:
         response = requests.get(url, params=params)
         if response.status_code == 200:
             data = response.json()
-            #bitcoin_price = data['price']
-            #print(bitcoin_price)
             return data
         else:
             return None
     
     def get_5_minutes_bitcoin_prices(self):
-        pass
+        url = last_24_minutes_API
+        response = requests.get(url)
+        if response.status_code == 200:
+            data = response.json()
+            return data
+        else:
+            return None
+
+    def get_daily_bitcoin_prices(self):
+        url = last_60_days_API
+        response = requests.get(url)
+        if response.status_code == 200:
+            data = response.json()
+            return data
+        else:
+            return None

@@ -113,7 +113,8 @@ def fetch_data(loop, frequency):
         data_handler_manager.populate_array(frequency)
         print(len(data_handler_manager.data_array))
         # Notify WebSocket clients about the fetched data
-        if len(data_handler_manager.data_array) == 1 and data_handler_manager.prediction_data:
+        #if len(data_handler_manager.data_array) == 1 and data_handler_manager.prediction_data:
+        if data_handler_manager.prediction_data:
             asyncio.run_coroutine_threadsafe(notify_clients(signal_data=data_handler_manager.prediction_data), loop)
         if frequency == 'minute':
             time.sleep(1)

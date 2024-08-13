@@ -8,7 +8,7 @@ export const post = async (endpoint, data) => {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                // Add other headers here if needed
+                
             },
             body: JSON.stringify(data),
         });
@@ -18,7 +18,7 @@ export const post = async (endpoint, data) => {
         return await response.json();
     } catch (error) {
         console.error('POST request failed', error);
-        throw error; // Re-throw to handle it in the component or calling function
+        throw error; 
     }
 };
 
@@ -28,7 +28,7 @@ export const get = async (endpoint) => {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                // Add other headers here if needed
+                
             },
         });
         if (!response.ok) {
@@ -37,7 +37,7 @@ export const get = async (endpoint) => {
         return await response.json();
     } catch (error) {
         console.error('GET request failed', error);
-        throw error; // Re-throw to handle it in the component or calling function
+        throw error;
     }
 };
 
